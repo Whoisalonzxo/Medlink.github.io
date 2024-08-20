@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Medlink img sin fondo.png" type="image/x-icon">
+    <title align=center>MedLINK</title>
+    <style>
+           header {
+        background-color: #7aa8ff;
+        color: white;
+        padding: 15px 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+     body {
+          
+            background-color: #ecf2f2;
+           
+        }
+
+
+    .header-text {
+        text-align: left;
+    }
+
+    .header-text h1 {
+        margin: 0;
+    }
+
+    .logo {
+        max-width: 200px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    nav {
+        background-color: #7aa8ff;
+        padding: 5px 0; /* Reduce el padding para hacer el contenedor más pequeño */
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-right: auto;
+        margin-left: 5px;
+        position: sticky;
+        top: 10px; /* Mantiene el contenedor a 10px de la parte superior mientras haces scroll */
+        width: 180px; /* Ajusta el ancho del contenedor */
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    nav li {
+        margin-bottom: 10px;
+    }
+
+    nav a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+    }
+
+    nav a:hover {
+        background-color: #10cb84;
+    }
+
+    .section {
+        background-color: #ffffff;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .section p {
+        margin-bottom: 10px;
+    }
+
+    .section h2 {
+        color: #15B4D8;
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+
+    .section h3 {
+        font-size: 1.4rem;
+        margin-top: 0;
+    }
+
+    .image-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 15px;
+    }
+
+    .image-gallery img {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .emergency-contacts li {
+        margin-bottom: 5px;
+    }
+
+    .hospital-card {
+        background-color: #ffffff;
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+     
+
+    .info-inc li {
+        margin-bottom: 5px;
+         }
+
+    footer {
+        background-color: #7aa8ff;
+        color: white;
+        text-align: center;
+        padding: 5px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        transition: transform 0.3s ease;
+    }
+
+    .hide-footer {
+        transform: translateY(100%);
+    }
+</style>
+   
+</head>
+<body>
+    <header>
+        <div class="header-text">
+            <h1>MedLINK</h1>
+            
+        </div>
+        <div class="logo">
+            <img src="Medlink img sin fondo.png" width="225" height="200" alt="MedLINK Logo">
+        </div>
+    </header>
+
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="Medlink Home page.html"> Buscar Información</a></li>
+                <li><a href="#Contactos de Emergencia"> Contactos de Emergencia</a></li>
+                <li><a href="#hospitales"> Hospitales Cercanos</a></li>
+                <li><a href="Medlink User Data.html" > Ingresar datos del usuario</a></li>
+                <li><a href="Medlink Terms.html" >Terminos y Condiciones</a></li>
+            </ul>
+        </nav>
+
+        <main>
+
+              <section id="info" class="section">
+                <h2>Conocimiento médico al alcance de un clic</h2>
+                <p>Experimenta la mejor herramienta médica, para la seguridad de tu vida.</p>
+                <p align="center"><img src="nosotros.png" alt="nosotros"><p>
+                <br></br>
+                <!-- Botones corregidos para que redirijan a las páginas adecuadas -->
+        
+                <input type="button" value="Datos del usuario" onclick="window.location.href='Medlink User Data.html'">
+                <input type="button" value="Términos y condiciones" onclick="window.location.href='Medlink Terms.html'">
+            </section>
+           
+
+            <section id="alergias" class="section">
+                <h2>Alergias, Infecciones, Fracturas y Primeros Auxilios</h2>
+                <p>En esta sección encontrarás información sobre diferentes temas médicos importantes:</p>
+                <h3>Alergias</h3>
+                <p>Información sobre tipos comunes de alergias y tratamientos disponibles.</p>
+
+
+                <b>1. ¿Qué es una Alergia?</b>
+
+<p>Una alergia es una reacción exagerada del sistema inmunológico a sustancias que generalmente son inofensivas para la mayoría de las personas, conocidas como alérgenos. Cuando una persona alérgica entra en contacto con un alérgeno, su cuerpo lo reconoce como una amenaza y libera químicos como la histamina, que provocan los síntomas alérgicos.</p>
+
+<b>2. Tipos Comunes de Alergias:</b>
+<ul>
+<li>Alergias Alimentarias: Reacciones a ciertos alimentos como cacahuetes, mariscos, leche o huevos.</li>
+<li>Alergias Estacionales (Rinitis alérgica): Causadas por polen, moho o polvo durante ciertas épocas del año.</li>
+<li>Alergias a Medicamentos: Reacciones adversas a fármacos como la penicilina o la aspirina.</li>
+<li>Alergias a Picaduras de Insectos: Reacciones a la picadura de abejas, avispas u otros insectos.</li>
+<li>Alergias a Animales: Causadas por el pelo, la caspa o la saliva de animales como gatos o perros.</li>
+<li>Alergias a Sustancias Químicas: Reacciones a productos como cosméticos, detergentes o látex.</li>
+</ul>
+<b>3. Síntomas Comunes de Alergias:</b>
+<ul>
+<li>Rinitis: Estornudos, secreción nasal, congestión nasal.</li>
+<li>Problemas respiratorios: Dificultad para respirar, sibilancias, tos.</li>
+<li>Problemas en la piel: Urticaria, enrojecimiento, picazón, eccema.</li>
+<li>Síntomas oculares: Lagrimeo, picazón, enrojecimiento de los ojos.</li>
+<li>Síntomas digestivos: Náuseas, vómitos, diarrea, dolor abdominal.</li>
+<li>Anafilaxia: Una reacción alérgica grave y potencialmente mortal que requiere atención médica inmediata.</li>
+</ul>
+<b>4. Diagnóstico de Alergias:</b>
+<ul>
+<li>Pruebas cutáneas: Se aplican pequeñas cantidades de alérgenos en la piel para observar si hay reacción.</li>
+<li>Pruebas de sangre: Miden los niveles de anticuerpos (IgE) que el cuerpo produce en respuesta a alérgenos específicos.</li>
+<li>Historial clínico: Evaluación detallada de los síntomas, su aparición y posibles desencadenantes.</li>
+
+</ul>
+<b>5. Tratamiento de Alergias:</b>
+<ul>
+<li>Antihistamínicos: Medicamentos que bloquean la acción de la histamina, aliviando síntomas como estornudos, picazón o congestión.</li>
+<li>Corticosteroides: Reducen la inflamación en casos más severos de alergia.</li>
+<li>Inmunoterapia (vacunas para alergias): Exposición controlada al alérgeno para reducir la sensibilidad con el tiempo.</li>
+<li>Epinefrina (Adrenalina): Usada en casos de anafilaxia para contrarrestar la reacción alérgica grave.</li>
+</ul>
+<b>6. Prevención y Manejo de Alergias:</b>
+<ul>
+<li>Evitar alérgenos conocidos: Mantenerse alejado de los desencadenantes conocidos.</li>
+<li>Uso de medicamentos preventivos: Tomar antihistamínicos antes de la exposición a alérgenos.</li>
+<li>Mantener el ambiente limpio: Reducir el polvo, usar purificadores de aire y evitar el moho.</li>
+<li>Leer etiquetas: Especialmente en alimentos y productos de cuidado personal para evitar alérgenos ocultos.</li>
+</ul>
+<b>7. Importancia del Registro de Datos Médicos sobre Alergias:</b>
+<ul>
+<li>Identificación de Patrones: Ayuda a reconocer y evitar alérgenos específicos.</li>
+<li>Prevención de Reacciones Graves: Mantiene a los proveedores de salud informados sobre reacciones previas y tratamientos efectivos.</li>
+<li>Mejora del Tratamiento: Facilita el ajuste de tratamientos basados en la respuesta individual a terapias previas.</li>
+<li>El almacenamiento adecuado y preciso de datos médicos relacionados con las alergias es crucial para la prevención de reacciones graves y la optimización del manejo de la alergia en cada paciente.</li>
+</ul>
+
+                <h3>Infecciones</h3>
+                <p>Guía sobre infecciones virales y bacterianas, cómo prevenirlas y tratarlas adecuadamente.</p>
+                 <b>1. ¿Qué es una infección?</b>
+
+<P>Una infección ocurre cuando microorganismos como bacterias, virus, hongos o parásitos invaden el cuerpo, se multiplican y causan daño. Estas pueden afectar cualquier parte del cuerpo y variar en gravedad, desde leves hasta potencialmente mortales.</P>
+
+ <b>2. Tipos de Infecciones:</b>
+ <ul>
+<li>Bacterianas: Causadas por bacterias, como la neumonía, tuberculosis o infecciones urinarias.</li>
+<li>Virales: Provocadas por virus, como la gripe, el COVID-19 o el VIH.</li>
+<li>Fúngicas: Producidas por hongos, como las infecciones por cándida o la tiña.</li>
+<li>Parasitarias: Originadas por parásitos, como la malaria o la giardiasis.</li>
+</ul>
+ <b>3. Síntomas Comunes de Infecciones:</b>
+ <ul>
+<li>Fiebre</li>
+<li>Dolor o malestar general</li>
+<li>Fatiga</li>
+<li>Inflamación o hinchazón</li>
+<li>Enrojecimiento o erupciones en la piel</li>
+<li>Secreción o pus</li>
+</ul>
+ <b>4. Diagnóstico de Infecciones:</b>
+ <ul>
+<li>Examen físico: Evaluación de los síntomas y signos clínicos.</li>
+<li>Pruebas de laboratorio: Cultivos, análisis de sangre, pruebas de orina, o análisis de imágenes.</li>
+<li>Historia clínica: Información sobre exposición a factores de riesgo, viajes, o contacto con personas enfermas.</li>
+</ul> 
+ <b>5. Tratamiento de Infecciones:</b>
+<ul>
+
+<li>Antibióticos: Utilizados para infecciones bacterianas.</li>
+<li>Antivirales: Medicamentos específicos para infecciones virales.</li>
+<li>Antifúngicos: Tratamiento para infecciones por hongos.</li>
+<li>Antiparasitarios: Usados para combatir infecciones parasitarias.</li>
+<li>Medidas de soporte: Hidratación, reposo, y medicamentos para aliviar los síntomas.</li>
+</ul>
+ <b>6. Prevención de Infecciones:</b>
+ <ul>
+<li>Higiene personal: Lavado de manos frecuente.</li>
+<li>Vacunación: Prevención de infecciones graves como la gripe, hepatitis, o COVID-19.</li>
+<li>Seguridad alimentaria: Cocinar adecuadamente los alimentos y evitar el consumo de agua contaminada.</li>
+<li>Uso de equipo de protección: Mascarillas, guantes, y otras barreras para evitar la transmisión.</li>
+</ul>
+ <b>7. Importancia del Registro de Datos Médicos:</b>
+ <ul>
+<li>Seguimiento del Paciente: Ayuda en la monitorización del progreso y respuesta al tratamiento.</li>
+<li>Prevención de Complicaciones: Identifica patrones y factores de riesgo.</li>
+<li>Facilita la Comunicación: Proporciona a los profesionales de la salud información crucial para la toma de decisiones.</li>
+<li>El almacenamiento adecuado de datos médicos sobre infecciones, incluyendo tipo, duración, tratamiento y respuesta, es esencial para una atención de salud eficaz y personalizada.</li>
+</ul>
+
+                <h3>Primeros Auxilios</h3>
+                <p>Los primeros auxilios corresponden a la atención prestada en el lugar a una o más personas accidentadas, antes de ser trasladada a un centro de salud.</p>
+                <p>“Los primeros auxilios es la atención inmediata que se brinda a las víctimas de un accidente o en una situación de emergencia”, explica Carolina Pastén, enfermera del Servicio de Urgencia de Clínica Alemana. Tener conocimientos de primeros auxilios puede ser fundamental para ayudar a una persona accidentada, incluso si se trata de salvar su vida. Los primeros auxilios colaboran a manejar en primera instancia una emergencia, lo que permite contener o disminuir el daño que se generó en el accidente. Es un tiempo vital antes de que la persona sea trasladada a un centro asistencial. De acuerdo con la profesional de Clínica Alemana, aplicar los principios de primeros auxilios permite:</p>
+                <ul>
+                    <li>Socorrer a la víctima mientras llegan los equipos de salud especializados o es trasladada.</li>
+                    <li>Evitar mayores daños o complicaciones.</li>
+                    <li>Recopilar información sobre lo sucedido para aportar al equipo de salud.</li>
+                </ul>
+                <p>¿Quién puede dar primeros auxilios? Protégete en caso de emergencia. Cualquier persona de la comunidad que esté capacitada puede brindar primeros auxilios. Pero es muy importante que quien presta ayuda (socorrista) tome ciertas precauciones en la zona donde se produjo la emergencia para protección del accidentado y del socorrista.</p>
+                <p>“Es fundamental que como socorristas nos preocupemos de estar en una zona segura junto al accidentado. La idea es no ponernos en riesgo por tratar de ayudar”, recomienda Carolina Pastén. Es importante tener en cuenta algunas recomendaciones para prestar primeros auxilios:</p>
+                <ul>
+                    <li>Evaluar la seguridad de la escena. “No debemos actuar en lugares que nos pondrán en riesgo”.</li>
+                    <li>Ayudar solo en caso de tener conocimientos frente a la situación, si tiene duda, no actúe.</li>
+                    <li>Actuar con precaución, utilizando todos los elementos de protección personal necesarios.</li>
+                    <li>Evitar mover a la persona accidentada en caso de que su vida no esté en peligro.</li>
+                    <li>Llamar lo antes posible a los números de emergencia.</li>
+                    <li>No interrumpir el contacto con los servicios de urgencia.</li>
+                </ul>
+            </section>
+
+            <section id="hospitales" class="section">
+                <h2>Hospitales Cercanos</h2>
+                <div class="hospital-card">
+                    <h3>Hospital Del Niño</h3>
+                    <p>Dirección: Av. Balboa y Calle 34
+                                  Panamá, Republica De Panamá</p>
+                    <p>Teléfono: +507 512-9801/ +507 512-9808</p>
+                    <p>Servicios: Maternidad, Pediatría</p>
+                </div>
+                <div class="hospital-card">
+                    <h3>Hospital Nacional</h3>
+                    <p>Dirección: Ave.Cuba entre Calle 38 y 39, Ciudad de Panamá</p>
+                    <p>Teléfono: +507 2078100/+507 3063300</p>
+                    <p>Servicios: Maternidad, Radiología, Cirugías</p>
+                </div>
+                <div class="hospital-card">
+                    <h3>Hospital Santo Tomás</h3>
+                    <p>Dirección: Calle 37 Este, Panamá</p>
+                    <p>Teléfono: 507-5600 / 507-5700</p>
+                    <p>Servicios: Maternidad, Radiología, Cirugías</p>
+                </div>
+            </section>
+
+             <section id="contactos" class="section">
+                <h2>Números de Contacto de Emergencia</h2>
+                <ul class="emergency-contacts">
+                    <li><strong>911</strong> - Emergencias generales</li>
+                    <li><strong>103</strong> - Contacte con los bomberos</li>
+                    <!-- Otros números de contacto -->
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 MedLINK. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            var footer = document.querySelector('footer');
+            if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight) {
+                footer.classList.remove('hide-footer');
+            } else {
+                footer.classList.add('hide-footer');
+            }
+        });
+    </script>
+</body>
+</html>
+

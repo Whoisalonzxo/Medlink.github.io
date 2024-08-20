@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Medlink img sin fondo.png" type="image/x-icon">
+    <title>MedLINK</title>
+    <style>
+        header {
+            background-color: #7AA8FF;
+            color: white;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        body {
+            background-color: #ecf2f2;
+            margin: 0;
+            padding-bottom: 100px; /* Ensure footer doesn't overlap content */
+        }
+        .header-text {
+            text-align: left;
+        }
+        .header-text h1 {
+            margin: 0;
+        }
+        .logo {
+            max-width: 200px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        nav {
+            background-color: #7AA8FF;
+            padding: 5px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-right: auto;
+            margin-left: 5px;
+            position: sticky;
+            top: 10px;
+            width: 180px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        nav li {
+            margin-bottom: 10px;
+        }
+        nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+        nav a:hover {
+            background-color: #10cb84;
+        }
+        .section {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section p {
+            margin-bottom: 10px;
+        }
+        .section h2 {
+            color: #15B4D8;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        .section h3 {
+            font-size: 1.4rem;
+            margin-top: 0;
+        }
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        .image-gallery img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .emergency-contacts li {
+            margin-bottom: 5px;
+        }
+        .hospital-card {
+            background-color: #ffffff;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #7AA8FF;
+            color: white;
+            text-align: center;
+            padding: 5px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        #qr-code-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        #qr-code {
+            margin-bottom: 10px;
+            z-index: 10;
+        }
+        #qr-message {
+            font-size: 1.2rem;
+            color: #333;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-text">
+            <h1>MedLINK</h1>
+        </div>
+        <div class="logo">
+            <img src="Medlink img sin fondo.png" width="225" height="200" alt="MedLINK Logo">
+        </div>
+    </header>
+
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="Medlink Home page.html"> Buscar Información</a></li>
+                <li><a href="Medlink Home Page.html"> Contactos de Emergencia</a></li>
+                <li><a href="Medlink Home page.html"> Hospitales Cercanos</a></li>
+                <li><a href="Medlink User Data.html"> Ingresar datos del usuario</a></li>
+                <li><a href="Medlink Terms.html">Terminos y Condiciones</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="buscar" class="section">
+                <h2>Centro de Datos del usuario</h2>
+                <form id="miFormulario">
+                    <label for="nombre">Nombre:</label><br>
+                    <input type="text" id="nombre" name="nombre"><br><br>
+
+                    <label for="cedula">Cédula:</label><br>
+                    <input type="text" id="cedula" name="cedula"><br><br>
+
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email"><br><br>
+
+                    <label for="seguro">Seguro:</label><br>
+                    <input type="text" id="seguro" name="seguro"><br><br>
+
+                    <label for="sangre">¿Ingresar tipo de sangre?</label><br>
+                    <input type="radio" id="sangre-si" name="sangre" value="si" onclick="mostrarCajaSangre()">
+                    <label for="sangre-si">Sí</label><br>
+                    <input type="radio" id="sangre-no" name="sangre" value="no" onclick="ocultarCajaSangre()">
+                    <label for="sangre-no">No</label><br><br>
+
+                    <div id="sangre-info">
+                        <label for="tipo-sangre">Seleccione su tipo de sangre:</label><br>
+                        <input type="radio" id="sangreA+" name="tipo-sangre" value="A+">
+                        <label for="sangreA+">A+</label><br>
+                        <input type="radio" id="sangreA-" name="tipo-sangre" value="A-">
+                        <label for="sangreA-">A-</label><br>
+                        <input type="radio" id="sangreB+" name="tipo-sangre" value="B+">
+                        <label for="sangreB+">B+</label><br>
+                        <input type="radio" id="sangreB-" name="tipo-sangre" value="B-">
+                        <label for="sangreB-">B-</label><br>
+                        <input type="radio" id="sangreAB+" name="tipo-sangre" value="AB+">
+                        <label for="sangreAB+">AB+</label><br>
+                        <input type="radio" id="sangreAB-" name="tipo-sangre" value="AB-">
+                        <label for="sangreAB-">AB-</label><br>
+                        <input type="radio" id="sangreO+" name="tipo-sangre" value="O+">
+                        <label for="sangreO+">O+</label><br>
+                        <input type="radio" id="sangreO-" name="tipo-sangre" value="O-">
+                        <label for="sangreO-">O-</label><br><br>
+                    </div>
+
+                    <label for="mensaje">Mensaje:</label><br>
+                    <textarea id="mensaje" name="mensaje" rows="4" cols="50"></textarea><br><br>
+
+                    <label for="alergias">¿Presenta alergias?</label><br>
+                    <input type="radio" id="alergias-si" name="alergias" value="si" onclick="mostrarCajaAlergias()">
+                    <label for="alergias-si">Sí</label><br>
+                    <input type="radio" id="alergias-no" name="alergias" value="no" onclick="ocultarCajaAlergias()">
+                    <label for="alergias-no">No</label><br><br>
+
+                    <div id="alergias-info">
+                        <label for="alergias">Describa sus alergias:</label><br>
+                        <textarea id="alergias" name="alergias" rows="4" cols="50"></textarea><br><br>
+                    </div>
+
+                    <input type="button" value="Guardar" onclick="guardarDatos()">
+                </form>
+
+                <div id="resultado"></div>
+
+                <div id="qr-code-container">
+                    <div id="qr-code"></div>
+                    <div id="qr-message">Escanee este código QR con su información guardada</div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer id="miFooter">
+        <p>&copy; 2024 MedLINK. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <script>
+        function guardarDatos() {
+            var nombre = document.getElementById("nombre").value;
+            var cedula = document.getElementById("cedula").value;
+            var email = document.getElementById("email").value;
+            var seguro = document.getElementById("seguro").value;
+            var sangre = document.querySelector('input[name="tipo-sangre"]:checked');
+            var mensaje = document.getElementById("mensaje").value;
+            var alergias = document.getElementById("alergias").value;
+
+            var tipoSangre = sangre ? sangre.value : "No ingresado";
+
+            var resultado = "Nombre: " + nombre + "<br>" +
+                "Cédula: " + cedula + "<br>" +
+                "Email: " + email + "<br>" +
+                "Seguro: " + seguro + "<br>" +
+                "Tipo de Sangre: " + tipoSangre + "<br>" +
+                "Mensaje: " + mensaje + "<br>" +
+                "Alergias: " + alergias + "<br>";
+
+            document.getElementById("resultado").innerHTML = resultado;
+
+            var userData = {
+                nombre: nombre,
+                cedula: cedula,
+                email: email,
+                seguro: seguro,
+                tipoSangre: tipoSangre,
+                mensaje: mensaje,
+                alergias: alergias
+            };
+
+            generateQRCode(userData);
+        }
+
+        function generateQRCode(userData) {
+            var qrCodeContainer = document.getElementById("qr-code");
+            qrCodeContainer.innerHTML = ""; // Limpiar cualquier QR existente
+
+            new QRCode(qrCodeContainer, {
+                text: JSON.stringify(userData),
+                width: 200,
+                height: 200,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+        }
+
+// Mostrar los paquetes de datos del QR como una tabla
+  var qrDataContainer = document.getElementById("qr-message");
+  qrDataContainer.innerHTML = ""; // Limpiar cualquier contenido existente
+
+  var table = document.createElement("table");
+  table.border = "1";
+
+  var headers = ["Campo", "Valor"];
+  var row = table.insertRow(0);
+  for (var i = 0; i < headers.length; i++) {
+    var cell = row.insertCell(i);
+    cell.innerHTML = headers[i];
+  }
+
+  // Agregar filas para cada paquete de datos
+  for (var key in userData) {
+    if (userData.hasOwnProperty(key)) {
+      var row = table.insertRow(table.rows.length);
+      var cell1 = row.insertCell(0);
+      cell1.innerHTML = key;
+      var cell2 = row.insertCell(1);
+      cell2.innerHTML = userData[key];
+    }
+  }
+
+  qrDataContainer.appendChild(table);
+  qrDataContainer.style.display = "block";
+
+
+
+        function mostrarCajaSangre() {
+            document.getElementById("sangre-info").style.display = "block";
+        }
+
+        function ocultarCajaSangre() {
+            document.getElementById("sangre-info").style.display = "none";
+        }
+
+        function mostrarCajaAlergias() {
+            document.getElementById("alergias-info").style.display = "block";
+        }
+
+        function ocultarCajaAlergias() {
+            document.getElementById("alergias-info").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
+
+
+   
+
+    

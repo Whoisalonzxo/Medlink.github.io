@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Medlink img sin fondo.png" type="image/x-icon">
+    <title>MedLINK</title>
+    <style>
+        header {
+            background-color: #7aa8ff;
+            color: white;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        body {
+            background-color: #ecf2f2;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header-text {
+            text-align: left;
+        }
+        .header-text h1 {
+            margin: 0;
+        }
+        .logo {
+            max-width: 200px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        nav {
+            background-color: #7aa8ff;
+            padding: 5px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-right: auto;
+            margin-left: 5px;
+            position: sticky;
+            top: 10px;
+            width: 180px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        nav li {
+            margin-bottom: 10px;
+        }
+        nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+        nav a:hover {
+            background-color: #10cb84;
+        }
+        .section {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section p {
+            margin-bottom: 10px;
+        }
+        .section h2 {
+            color: #15B4D8;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        .section h3 {
+            font-size: 1.4rem;
+            margin-top: 0;
+        }
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        .image-gallery img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .emergency-contacts li {
+            margin-bottom: 5px;
+        }
+        .hospital-card {
+            background-color: #ffffff;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #7aa8ff;
+            color: white;
+            text-align: center;
+            padding: 5px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+        .hide-footer {
+            transform: translateY(100%);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-text">
+            <h1>MedLINK</h1>
+        </div>
+        <div class="logo">
+            <img src="Medlink img sin fondo.png" width="225" height="200" alt="MedLINK Logo">
+        </div>
+    </header>
+
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="Medlink Home page.html">Buscar Información</a></li>
+                <li><a href="Medlink Home page.html">Contactos de Emergencia</a></li>
+                <li><a href="Medlink Home page.html">Hospitales Cercanos</a></li>
+                <li><a href="Medlink User Data.html">Ingresar datos del usuario</a></li>
+                <li><a href="Medlink Terms.html">Términos y Condiciones</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="buscar" class="section">
+                <font color=#15B4D8 size=6>
+                    <p align=center><b>Términos y Condiciones de Uso de MedLink</b></p>
+                </font>
+                <font size=3>
+                    <p>Fecha de entrada en vigencia: 21/08/2024</p>
+                    <p><b>1. Introducción</b></p>
+                    <p>Bienvenido a MedLink. Al acceder y utilizar nuestro sitio web [www.medlink.com] (en adelante, "el Sitio"), usted acepta estos Términos y Condiciones. Si no está de acuerdo con alguna parte de estos términos, no debe utilizar el Sitio.</p>
+                    <p><b>2. Descripción del Servicio</b></p>
+                    <p>MedLink ofrece una plataforma en línea para gestionar y almacenar información médica de los usuarios. Esta información puede ser compartida con hospitales y profesionales de la salud para facilitar la atención médica y el tratamiento.</p>
+                    <p><b>3. Registro y Acceso</b></p>
+                    <ul>
+                        <li>3.1. Para utilizar nuestras funciones completas, deberá crear una cuenta en MedLink. Debe proporcionar información precisa y completa durante el registro y mantenerla actualizada.</li>
+                        <li>3.2. Usted es responsable de mantener la confidencialidad de su cuenta y contraseña, y de todas las actividades que ocurran bajo su cuenta.</li>
+                    </ul>
+                    <p><b>4. Uso de la Información Médica</b></p>
+                    <ul>
+                        <li>4.1. Recopilación y Almacenamiento: Recopilamos, almacenamos y procesamos su información médica de acuerdo con nuestra Política de Privacidad.</li>
+                        <li>4.2. Uso Compartido: Su información médica puede ser compartida con hospitales y profesionales de la salud para la atención y el tratamiento médico, siempre con su consentimiento previo.</li>
+                        <li>4.3. Seguridad: Implementamos medidas de seguridad razonables para proteger su información médica. Sin embargo, no podemos garantizar la seguridad absoluta de los datos transmitidos a través de Internet.</li>
+                    </ul>
+                    <p><b>5. Propiedad Intelectual</b></p>
+                    <ul>
+                        <li>5.1. Todos los contenidos del Sitio, incluidos textos, gráficos, logotipos y software, son propiedad de MedLink o de sus licenciantes y están protegidos por las leyes de propiedad intelectual.</li>
+                        <li>5.2. No se le concede ningún derecho sobre la propiedad intelectual del Sitio, excepto el derecho a utilizar el Sitio de acuerdo con estos Términos.</li>
+                    </ul>
+                    <p><b>6. Contenidos del Usuario</b></p>
+                    <ul>
+                        <li>6.1. Usted puede enviar o cargar información médica y otros contenidos en el Sitio. Al hacerlo, concede a MedLink una licencia mundial, no exclusiva, libre de regalías y sublicenciable para usar, reproducir y distribuir dicho contenido.</li>
+                        <li>6.2. Usted es el único responsable del contenido que envía, y debe asegurarse de que no infrinja los derechos de terceros ni las leyes aplicables.</li>
+                    </ul>
+                    <p><b>7. Privacidad</b></p>
+                    <ul>
+                        <li>7.1. Su privacidad es fundamental para nosotros. Lea nuestra Política de Privacidad para entender cómo recopilamos, usamos y protegemos su información personal y médica.</li>
+                    </ul>
+                    <p><b>8. Enlaces a Terceros</b></p>
+                    <ul>
+                        <li>8.1. El Sitio puede contener enlaces a sitios web de terceros. No somos responsables del contenido ni de las prácticas de privacidad de estos sitios. Le recomendamos revisar los términos y políticas de cualquier sitio web al que acceda a través de MedLink.</li>
+                    </ul>
+                    <p><b>9. Limitación de Responsabilidad</b></p>
+                    <ul>
+                        <li>9.1. En la medida máxima permitida por la ley, MedLink no será responsable de ningún daño indirecto, incidental, especial o consecuente derivado del uso del Sitio, la imposibilidad de usar el Sitio o la falta de disponibilidad de información médica.</li>
+                    </ul>
+                    <p><b>10. Modificaciones</b></p>
+                    <ul>
+                        <li>10.1. MedLink se reserva el derecho de modificar estos Términos en cualquier momento. Cualquier cambio será publicado en el Sitio y entrará en vigor inmediatamente.</li>
+                    </ul>
+                    <p><b>11. Terminación</b></p>
+                    <ul>
+                        <li>11.1. MedLink se reserva el derecho de suspender o terminar su acceso al Sitio en caso de incumplimiento de estos Términos o por cualquier otra razón que consideremos necesaria.</li>
+                    </ul>
+                    <p><b>12. Ley Aplicable</b></p>
+                    <ul>
+                        <li>12.1. Estos Términos se regirán e interpretarán de acuerdo con las leyes de [País]. Cualquier disputa relacionada con estos Términos será resuelta por los tribunales competentes de [Ciudad, País].</li>
+                    </ul>
+                    <p><b>13. Contacto</b></p>
+                    <ul>
+                        <li>13.1. Si tiene alguna pregunta sobre estos Términos o sobre el Sitio, puede contactarnos en <a href="mailto:MedLink@corp.com">MedLink@corp.com</a>.</li>
+                    </ul>
+                </font>
+            </section>
+        </main>
+    </div>
+
+    <footer id="footer">
+        <p>&copy; 2024 MedLink. Todos los derechos reservados.</p>
+        <p>Para soporte, envía mensajes a <a href="mailto:MedLink@corp.com">MedLink@corp.com</a></p>
+    </footer>
+
+    <script>
+        let lastScrollTop = 0;
+        const footer = document.getElementById('footer');
+
+        window.addEventListener('scroll', function() {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            if (currentScroll > lastScrollTop) {
+                // Scrolling down
+                footer.classList.add('hide-footer');
+            } else {
+                // Scrolling up
+                footer.classList.remove('hide-footer');
+            }
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+        }, false);
+    </script>
+</body>
+</html>
